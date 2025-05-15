@@ -1,0 +1,14 @@
+<a href="/new" class="btn btn-primary mb-3">+ New Note</a>
+
+<% if (notes.length === 0) { %>
+  <p>No notes yet.</p>
+<% } else { %>
+  <% notes.forEach(note => { %>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title"><%= note.title %></h5>
+        <p class="card-text"><%= note.content %></p>
+      </div>
+    </div>
+  <% }) %>
+<% } %>
